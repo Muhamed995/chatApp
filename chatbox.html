@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="chat-style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <title>ChatBox</title>
+</head>
+<body>
+    <div class="container">
+         <div id="minimize">
+                
+            </div>
+            <div class="maximize"></div>
+        <div class="ChatBox">
+           
+            <div class="chatNames">
+                <h4 class="korisnici">Users</h4>
+                <div class="chatUsers">
+                    <div class="firstUser">
+                        <img src="muhamed.jpg" alt="user" class="user" style="display:inline-block;">
+                        <div class="konekcija">
+                        <a href=""class="first" id="localName"> </a>
+                        <p class="disconnected" id="localConnected">Disconnected</p>
+                    </div>
+                        </div>
+                        <div class="secondUser">  
+                            <img src="miki.jpg" alt="user" class="user">   
+                            <div class="konekcija">                       
+                            <a href="" class="second" id="remoteName"></a>
+                            <p class="disconnected" id="remoteConnected">Disconnected</p>
+                          </div>  
+                        </div>    
+                        
+                </div>
+                <div class="backTo">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                   
+                </div>
+            </div>
+
+            <div class="chatForm">
+                <div class="chatWindow">
+                    <ul id="userMessage">
+                        
+
+                    </ul>
+                </div>
+                <div class="chatMessage">
+                <input type="text" id="msg" >
+                <i class="fas fa-paper-plane" id="send"></i>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>

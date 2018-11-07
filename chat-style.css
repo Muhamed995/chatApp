@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mali', cursive;
+}
+
+body{
+    background: #cff9f4;
+
+}
+
+ul{
+   list-style-type: none;
+   margin:0;
+   padding: 0;
+   
+}
+
+ul li{
+    display: inline-block;
+    clear: both;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 3px;
+}
+
+.msgLeft{
+    width: auto;
+    background: #eee;
+    float: left;
+    text-align: left;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+.msgRight{
+    width: auto;
+    background: #0084ff;
+    float: right;
+    text-align: right;
+    color: #fff;
+    margin-right: 8px;
+    margin-bottom: 5px;
+
+}
+
+.msgLeft + .msgRight{
+    border-bottom-right-radius: 5px;
+}
+
+.msgRight + .msgRight{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.msgRight:last-of-type{
+    border-bottom-right-radius: 30px;
+}
+
+
+.container{
+    display: flex;
+    position: relative;
+
+}
+
+#minimize{
+    position: absolute;
+    right: 40%;
+    left: 62%;
+    top: 29px;
+	opacity: .5;
+	cursor: pointer;
+		
+}
+#minimize:hover{
+    opacity: .7;
+}
+
+#minimize:active{
+    opacity: 1;
+}
+
+#minimize:before, #minimize::after{
+position: absolute;
+				content: "";
+				width: 10px;
+				height: 2px;
+				background-color: black;
+				position: absolute;
+				border-radius: 2px;
+				
+				top: 14px;
+				left: 10px;
+}
+
+
+.ChatBox{
+    width: 600px;
+    min-height: 620px;
+    padding: 35px;
+    margin: 20px auto;
+    background-color: #fff;
+   
+   display: flex;
+   border-radius: 25px;
+   	transition:
+		top .5s 0s cubic-bezier(.1, 1.2, .3, 1),
+		transform .5s 0s cubic-bezier(.1, 1.2, .3, 1),
+		width .5s .5s cubic-bezier(.1, 1.2, .3, 1),
+		opacity .3s;
+}
+
+.chatNames{
+    width: 34%;
+    height: auto;
+    background: #585e5d;
+   flex: 1;
+}
+
+.chatForm{
+    width: 66%;
+    height: 100%;
+   position: relative;
+
+}
+
+.chatWindow{
+    width: 90%;
+    height: 480px;
+    border: 0.5px solid #ccc;
+    border-radius: 25px;
+    margin-left: 25px;
+    
+    overflow-y: auto;
+}
+
+.chatMessage{
+    position: absolute;
+    bottom: 0;
+}
+
+.chatForm input{
+    width: 280px;
+    height: 60px;
+    border-radius: 16px;
+    background-color: #dbdde0;
+    margin-left: 25px;
+    border: none;
+
+}
+
+.korisnici{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+
+
+.chatUsers{
+    width: 100%;
+    height: 40%;
+    padding-top: 30px;
+    position: relative;
+}
+
+.firstUser{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+}
+
+.first{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: 10px;
+    
+}
+
+.connected{
+
+    font-size: 12px;
+    padding-left: 15px;
+    margin-top: 10px; 
+    color: green;
+    cursor: pointer;
+}
+
+
+.disconnected{
+
+    font-size: 12px;
+    padding-left: 15px;
+    margin-top: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+.secondUser{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+}
+
+.second{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: 10px;
+
+}
+
+
+.chatUsers>p{
+    margin-left: 55px;
+}
+.user{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.fas{
+    
+  
+  color: #48a5ea;
+  
+  margin-left: 15px;
+  font-size: 22px;
+  
+  
+}
+
+.backTo{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.far{
+    font-size: 42px;
+    color: #fff;
+    margin: 0 auto;
+    
+}

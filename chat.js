@@ -1,6 +1,5 @@
 
 let ul=document.querySelector('#userMessage');
-let connected =false;
 ul.innerHTML='';
 let writeMessage = function (msg,klasa){
     let li=' <li class="'+klasa+'">';
@@ -20,7 +19,7 @@ document.querySelector('#send').addEventListener("click",(e)=>{
 // socket.close()
 socket.onopen = (e) =>{
     console.log("connected");
-    document.querySelector("#localName").innerHTML=sessionStorage.name;
+    document.querySelector("#localName").innerHTML = sessionStorage.name;
     document.getElementById("localConnected").innerHTML = "Connected";
     document.getElementById("localConnected").className = 'connected';
 };
@@ -35,18 +34,24 @@ socket.onerror =(e)=>{
 };
 
 socket.onmessage =(e)=>{
-    if (e.data.search("!cnc!")){
+    if (e.data.indexOf('!cnc!') !== -1){
         let name = e.data.replace("!cnc!", "");
         document.querySelector("#remoteName").innerHTML= name;
-    document.getElementById("remoteConnected").innerHTML = "Connected";
-    document.getElementById("remoteConnected").className = 'connected';
-    }else
-    writeMessage(e.data,"msgLeft");
-    
-    console.log("message recieved");
+        document.getElementById("remoteConnected").innerHTML = "Connected";
+        document.getElementById("remoteConnected").className = 'connected';
+    }
+    else{
+        writeMessage(e.data,"msgLeft");
+        console.log("message recieved");
+    }
 };
 
-
+let cnt = 0;
 setInterval(()=>{
-    socket.send(sessionStorage.name + "!cnc!"); 
-},3000)
+    cnt++;
+    if(cnt<3){
+        socket.send(sessionStorage.name + "!cnc!"); 
+    }else{
+        console.log('timeout');
+    }
+},2000)

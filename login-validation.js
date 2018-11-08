@@ -35,7 +35,7 @@ if(valid){
     //socket.onclose=used;
     socket.onopen=(e)=>{
     sessionStorage.setItem("port", port);
-    sessionStorage.setItem("name", name);
+    sessionStorage.setItem("name", username);
     socket.close();
     setTimeout(()=>{window.location="chatbox.html"},1000);
     };

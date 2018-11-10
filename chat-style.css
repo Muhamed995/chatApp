@@ -42,6 +42,7 @@ ul li{
     color: #fff;
     margin-right: 8px;
     margin-bottom: 5px;
+    margin-top: 10px;
 
 }
 
@@ -149,6 +150,7 @@ position: absolute;
     background-color: #dbdde0;
     margin-left: 25px;
     border: none;
+    padding-left: 17px;
 
 }
 
